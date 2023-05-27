@@ -58,3 +58,38 @@ class Triangle extends Shape {
 // console.log(new Triangle().perimeter()); // 0
 // console.log(new Triangle().area()); // 0
 
+// Array of sides arrays
+const data = [ [3, 4], [5, 5], [3, 4, 5], [10], [] ];
+let newObject=null;
+
+for (const element of data) {
+    //console.log(element)
+    switch(element.length){
+        case 2:
+            //console.log("case2")
+            newObject = new Rectangle(element[0], element[1]);
+            if (element[0] === element[1]) {
+                console.log(`Square with sides ${element.toString()} has perimeter of ${newObject.perimeter()} and area of ${newObject.area()}`);
+            } else {
+                console.log(`Rectangle with sides ${element.toString()} has perimeter of ${newObject.perimeter()} and area of ${newObject.area()}`);
+            }
+            break;
+        case 3:
+            //console.log("case3");
+            newObject = new Triangle(element[0], element[1], element[2]);
+            console.log(`Triangle with sides ${element.toString()} has perimeter of ${newObject.perimeter()} and area of ${newObject.area()}`);
+            break;
+        default:
+            //console.log("default");
+            //console.log(`Shape with ${element.length} side usupported`)
+            //const a = element.length === 1 ? console.log(`Shape with ${element.length} side usupported`) : console.log(`Shape with ${element.length} sides usupported`);
+            //console.log(a);
+            if (element.length === 1) {
+                console.log(`Shape with ${element.length} side usupported`)
+            } else {
+                console.log(`Shape with ${element.length} sides usupported`)
+            }
+    } 
+}
+
+
