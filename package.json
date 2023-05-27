@@ -1,0 +1,12 @@
+{
+  "name": "cit281-project-6",
+  "version": "1.0.0",
+  "description": "Instructor: Lindy Stewart",
+  "main": "p6.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
