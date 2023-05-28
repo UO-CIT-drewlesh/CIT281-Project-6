@@ -44,15 +44,11 @@ class Triangle extends Shape {
 
     area() {
         const s = (this.sideA + this.sideB + this.sideC) / 2;
-        // let a = s - this.sideA;
-        // let b = s - this.sideB;
-        // let c = s - this.sideC;
-        // let z = s*b*a*c;
-        // const area = Math.sqrt(z);
         let area = Math.sqrt(s*(s-this.sideA)*(s-this.sideB)*(s-this.sideC));
         return area;
     }
 }
+
 // console.log(new Triangle(3, 4, 5).perimeter());  // 12
 // console.log(new Triangle(3, 4, 5).area());  // 6
 // console.log(new Triangle().perimeter()); // 0
@@ -63,10 +59,8 @@ const data = [ [3, 4], [5, 5], [3, 4, 5], [10], [] ];
 let newObject=null;
 
 for (const element of data) {
-    //console.log(element)
     switch(element.length){
         case 2:
-            //console.log("case2")
             newObject = new Rectangle(element[0], element[1]);
             if (element[0] === element[1]) {
                 console.log(`Square with sides ${element.toString()} has perimeter of ${newObject.perimeter()} and area of ${newObject.area()}`);
@@ -75,15 +69,10 @@ for (const element of data) {
             }
             break;
         case 3:
-            //console.log("case3");
             newObject = new Triangle(element[0], element[1], element[2]);
             console.log(`Triangle with sides ${element.toString()} has perimeter of ${newObject.perimeter()} and area of ${newObject.area()}`);
             break;
         default:
-            //console.log("default");
-            //console.log(`Shape with ${element.length} side usupported`)
-            //const a = element.length === 1 ? console.log(`Shape with ${element.length} side usupported`) : console.log(`Shape with ${element.length} sides usupported`);
-            //console.log(a);
             if (element.length === 1) {
                 console.log(`Shape with ${element.length} side usupported`)
             } else {
