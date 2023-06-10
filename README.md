@@ -1,7 +1,9 @@
 # CIT281-Project-6
-Instructor: Lindy Stewart
+### [CIT Minor HOMEPAGE](https://drewlesh.github.io/)
 
-Instructions
+Instructor: Lindy Stewart
+## Material provided by instructor ## 
+## Instructions
 
 Please complete this project yourself. While you are encouraged to have high-level discussions with your fellow students, you must be able to complete the details of this project on your own.
 
